@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+</head>
+<body style="background-color:#dfe4f3;">
+
+    <form action='/submit' method = 'post'>
+
+    <textarea cols="30" rows="10" input type = 'text' name = 'user_data' placeholder = 'input_data' required = 'required'></textarea>
+
+    <label for="lst_languages">Choose a language:</label>
+
+    <select name= language method="GET" action="/">
+
+        {% for language in lst_languages %}
+        <option value="{{ language }}" SELECTED>{{ language }}</option>
+        {% endfor %}
+            
+    </select>
+    <button type = 'submit'>Predict</button>
+    </form>
+
+</body>
+</html>
